@@ -1,0 +1,47 @@
+/* Styling for demoing purposes */
+
+body {
+  margin: 0;
+}
+
+/* Styling for Dropdown */
+
+.dropdown-menu {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.dropdown-menu li {
+  width: 10%;
+  display: inline-block;
+  position: relative;
+  padding: 1% 0;
+  list-style: none;
+}
+
+.dropdown-menu li > span:hover {
+  cursor: pointer;
+}
+
+.dd-content {
+  width: 100%;
+  display: none;
+  position: absolute;
+  padding: 0;
+  background-color: orange;
+}
+
+.dd-content li {
+  width: 100%;
+  display: block;
+  overflow: visible;
+  text-align: left;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.show-dd {
+  display: block;
+}
