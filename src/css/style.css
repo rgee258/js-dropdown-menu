@@ -6,42 +6,82 @@ body {
 
 /* Styling for Dropdown */
 
-.dropdown-menu {
-  width: 80%;
-  position: relative;
-  margin: 0 auto;
-  background-color: green;
+.dropdown-container {
+  width: 100%;
+  margin: 0;
+  background-color: #2c323a;
 }
 
+.dropdown-menu {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  color: #a6a6a6;
+  font-family: Calibri;
+  background-color: #2c323a;
+}
+
+/* For removing link styling defaults and adding our own */
+.dropdown-menu li a, .dd-content li a {
+  text-decoration: none;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.dropdown-menu li a:hover, .dd-content li a:hover {
+  color: white;
+}
+
+/* Change width based on number of items for centering */
+/* Change padding based on dropdown-menu width */
+/* If dropdown-menu width grows, padding will too and vice versa */
 .dropdown-menu li {
-  width: 10%;
+  width: 24%;
   display: inline-block;
   position: relative;
-  padding: 1% 0;
+  padding: 2% 0;
+  text-align: center;
+  font-size: 1.05rem;
   list-style: none;
 }
 
 .dropdown-menu li > span:hover {
   cursor: pointer;
+  color: white;
 }
 
 .dd-content {
   width: 100%;
-  display: none;
+  visibility: hidden;
   position: absolute;
   padding: 0;
-  background-color: orange;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #2c323a;
+  opacity: 0.2;
 }
 
+/* Change padding based on dropdown-menu width */
 .dd-content li {
   width: 100%;
   display: block;
   overflow: visible;
-  text-align: left;
+  padding: 6% 0;
+  text-align: center;
   list-style: none;
   white-space: nowrap;
 }
 
-.show-dd {
-  display: block;
+.dd-content li:not(:last-child) {
+  border-bottom: 1px solid black;
 }
+
+/* We need to use visibility because changing displays will prevent transitions */
+.show-dd {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+/* End of Dropdown Styling */
